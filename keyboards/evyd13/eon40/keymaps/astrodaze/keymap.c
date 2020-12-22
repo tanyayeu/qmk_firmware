@@ -45,20 +45,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 
 [_LO] = LAYOUT_ortho_4x12(
-  RESET,    KC_1,       KC_2,    KC_3,       KC_4,       KC_5,    KC_6,    KC_MINS,    KC_8,    KC_9,   KC_PLUS,   KC_DEL,
-  KC_CAPS,  KC_4,      KC_5,      KC_6,        _______,    _______,     KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  KC_EQL,  KC_HOME,
+  RESET,    KC_1,       KC_2,    KC_3,       KC_4,       KC_5,    KC_6,    KC_MINS,    KC_8,    KC_MINS,   KC_PLUS,   KC_DEL,
+  KC_CAPS,  KC_4,      KC_5,      KC_6,      _______,    _______,     KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  KC_EQL,  KC_HOME,
   KC_CAPS,  KC_7,      KC_8,  KC_9,  LCTL(KC_V),  _______,  _______,  KC_QUOT,  KC_LBRC,  KC_RBRC,  KC_BSLS,  KC_ENT,
   KC_GRV,  _______,   KC_0,     _______,     _______,     _______,  _______,  _______,  KC_MNXT,  KC_VOLD,  KC_VOLU,  KC_MPLY),
 
 [_HI] = LAYOUT_ortho_4x12(
   RESET,    KC_1,       KC_2,       KC_3,       KC_4,       KC_5,    KC_6,    KC_7,    KC_8,    KC_9,   KC_0,   KC_DEL,
-  KC_CAPS,  LCTL(KC_A),  LCTL(KC_S),  _______,     LCTL(KC_F),     _______,  KC_LEFT,  KC_DOWN,  KC_UP,  KC_RGHT, _______,  KC_HOME,
+  KC_CAPS,  LCTL(KC_A),  LCTL(KC_S),  _______,     LCTL(KC_F),  _______,  _______,  KC_LBRC,  KC_RBRC,  _______, _______,  KC_HOME,
   KC_CAPS,  LCTL(KC_Z),  LCTL(KC_X),  LCTL(KC_C),  LCTL(KC_V),  _______,  _______,  _______,  KC_VOLD,  KC_VOLU,  KC_MPLY,   KC_END,
   KC_GRV,  _______,     _______,     _______,     _______,     _______,  _______,  _______,  _______,  _______,  _______,   _______),
 
 };
 
-#ifdef ENCODER_ENABLE
+//#ifdef ENCODER_ENABLE
 void encoder_update_user(uint8_t index, bool clockwise) {
     if (index == 0) { /* First encoder */
         if (clockwise) {
@@ -68,4 +68,4 @@ void encoder_update_user(uint8_t index, bool clockwise) {
         }
     }
 }
-#endif
+//#endif
