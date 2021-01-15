@@ -7,3 +7,7 @@
 #define ENCODER_RESOLUTION 4
 #define ENCODER_DIRECTION_FLIP
 #endif
+
+#ifdef LEADER_ENABLE
+#define LEADER_TIMEOUT 300
+#endif
