@@ -1,0 +1,1 @@
+astrodaze custom keymap for eon40
