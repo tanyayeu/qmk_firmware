@@ -58,8 +58,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      */
     [_FN] = LAYOUT_ortho_5x15( /* FUNCTION */
         KC_TILD, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_NLCK, KC_SLSH, KC_ASTR, KC_F6,   KC_F7,   KC_F8,   KC_MINS, _______,  KC_DEL,
-        _______, _______, _______, _______, _______, LCTL(KC_T), KC_P7,   KC_P8,   KC_P9,   KC_LBRC, KC_RBRC, _______, KC_UNDS, _______, KC_HOME,
-        KC_CAPS, LCTL(KC_A), _______, _______, LCTL(KC_F), _______, KC_P4,   RESET,   KC_P6,   KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______, KC_END,
+        _______, _______, _______, _______, _______, LCTL(KC_T), KC_P7,   KC_P8,   KC_P9,   KC_LBRC, KC_RBRC, _______, KC_UNDS, KC_EQL, KC_HOME,
+        KC_CAPS, LCTL(KC_A), _______, _______, KC_QUES, _______, KC_P4,   RESET,   KC_P6,   KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______, KC_END,
         RGB_VAI, LCTL(KC_Z), _______, LCTL(KC_C),  LCTL(KC_V), _______, KC_F1,   KC_F2,   KC_F3,   KC_PENT, _______, _______, _______, _______, KC_ENT,
         RGB_TOG, RGB_MOD, RGB_HUI, RGB_SAI, _______,_______, KC_P0,   _______, _______, _______, _______, KC_MPLY, KC_VOLD, KC_VOLU, KC_MNXT
     )
