@@ -24,22 +24,36 @@ enum layer_names {
 };
 
 enum tap_dances {
-  TD_SFT_PRN
+  TD_QUO_RPRN
 };
 
 qk_tap_dance_action_t tap_dance_actions[] = {
-  [TD_SFT_PRN] = ACTION_TAP_DANCE_DOUBLE(KC_LSFT, KC_RPRN) //HOLD FOR LSFT, TAP FOR LPRN, DT FOR RPRN
+  [TD_QUO_RPRN] = ACTION_TAP_DANCE_DOUBLE(KC_QUOT, KC_RPRN) //TAP FOR QUOTE, DT FOR RIGHT PRN
 };
 
+// Layer names
 #define LOWER  MO(_LOWER)
 #define RAISE  MO(_RAISE)
 #define ADJUST MO(_ADJUST)
 #define SYM    MO(_SYM)
 
+// Left-hand home row mods
+#define CTL_A LCTL_T(KC_A)
+#define ALT_S LALT_T(KC_S)
+#define GUI_D LGUI_T(KC_D)
+#define SFT_F LSFT_T(KC_F)
+
+// Right-hand home row mods
+#define SFT_J RSFT_T(KC_J)
+#define GUI_K RGUI_T(KC_K)
+#define ALT_L LALT_T(KC_L)
+#define CTL_SCLN RCTL_T(KC_SCLN)
+
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BASE] = LAYOUT_reviung39(
     KC_TAB,   KC_Q,     KC_W,     KC_E,     KC_R,      KC_T,               KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_BSPC,
-    TD(TD_SFT_PRN),  KC_A,     KC_S,     KC_D,     KC_F,      KC_G,               KC_H,     KC_J,     KC_K,     KC_L,     KC_SCLN,  KC_QUOT,
+    KC_LSPO,  CTL_A,    ALT_S,    GUI_D,    SFT_F,      KC_G,              KC_H,     SFT_J,    GUI_K,    ALT_L,    CTL_SCLN,   TD(TD_QUO_RPRN),
     KC_LCPO,  KC_Z,     KC_X,     KC_C,     KC_V,      KC_B,               KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,  RSFT_T(KC_ENT),
                                                        LT(RAISE, KC_BSPC),    LT(SYM, KC_SPC),   LT(LOWER, KC_SPC)
   ),
@@ -66,8 +80,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [_SYM] = LAYOUT_reviung39(
-    RESET,   XXXXXXX, XXXXXXX,  XXXXXXX,  XXXXXXX,   XXXXXXX,            KC_LBRC,  KC_RBRC,  XXXXXXX,  KC_MINS,  KC_EQL,  XXXXXXX,
-    XXXXXXX,   XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX,   XXXXXXX,            XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,
+    RESET,   XXXXXXX, XXXXXXX,  XXXXXXX,  XXXXXXX,   XXXXXXX,            KC_LBRC,  KC_RBRC,  XXXXXXX,  KC_UNDS,  KC_PLUS,  XXXXXXX,
+    XXXXXXX,   KC_LBRC, KC_RBRC,  KC_LBRC, KC_RBRC,   XXXXXXX,            XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_MINS,  KC_EQL,  XXXXXXX,
     XXXXXXX,   XXXXXXX, XXXXXXX,  XXXXXXX,  XXXXXXX,   XXXXXXX,            XXXXXXX,    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,
                                                        _______,  XXXXXXX,  _______
   ),
