@@ -55,7 +55,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,   KC_Q,     KC_W,     KC_E,     KC_R,      KC_T,               KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_BSPC,
     KC_LSPO,  CTL_A,    ALT_S,    GUI_D,    SFT_F,      KC_G,              KC_H,     SFT_J,    GUI_K,    ALT_L,    CTL_SCLN,   TD(TD_QUO_RPRN),
     KC_LCPO,  KC_Z,     KC_X,     KC_C,     KC_V,      KC_B,               KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,  RSFT_T(KC_ENT),
-                                                       LT(RAISE, KC_BSPC),    LT(SYM, KC_SPC),   LT(LOWER, KC_SPC)
+                                                       LT(RAISE, KC_BSPC),    LT(SYM, KC_SPC),   LT(LOWER, KC_ENT)
   ),
   
   [_LOWER] = LAYOUT_reviung39(
@@ -67,7 +67,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   
   [_RAISE] = LAYOUT_reviung39(
     KC_TILD,  KC_1,     KC_2,     KC_3,     KC_4,      KC_5,               KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     KC_DEL,
-    KC_CAPS,  KC_MINS,  KC_EQL,   KC_LBRC,  KC_RBRC,   KC_BSLS,            KC_LEFT,    KC_LEFT,    KC_UP,    KC_RGHT,    KC_F5,    KC_F6,
+    KC_CAPS,  KC_MINS,  KC_EQL,   KC_LBRC,  KC_RBRC,   KC_BSLS,            KC_LEFT,    KC_DOWN,    KC_UP,    KC_RGHT,    KC_F5,    KC_F6,
     _______,  KC_ESC,   KC_RGUI,  KC_RALT,  KC_CAPS,   KC_QUOT,            KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,   KC_F12,
                                                        _______,  SYM,  ADJUST
   ),
