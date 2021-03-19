@@ -58,7 +58,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BASE] = LAYOUT_reviung39(
     TD(TAB_ESC),   KC_Q,     KC_W,     KC_E,     KC_R,      KC_T,               KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_BSPC,
     KC_LSPO,  CTL_A,    ALT_S,    GUI_D,    SFT_F,      KC_G,                    KC_H,     SFT_J,    GUI_K,    ALT_L,    CTL_SCLN,   TD(TD_QUO_RPRN),
-    MT(MOD_LCTL, KC_LBRC),  KC_Z,     KC_X,     KC_C,     KC_V,      KC_B,               TD(N_CAPS),     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,  RSFT_T(KC_ENT),
+    MT(MOD_LCTL, KC_LBRC),  KC_Z,     KC_X,     KC_C,     KC_V,      KC_B,               KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,  RSFT_T(KC_ENT),
                                                        LT(RAISE, KC_BSPC),    LT(SYM, KC_SPC),   LT(LOWER, KC_ENT)
   ),
   
