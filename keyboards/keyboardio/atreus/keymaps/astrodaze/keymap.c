@@ -44,7 +44,7 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_QW] = LAYOUT( /* Qwerty */
     TD(TD_Q_TAB),    KC_W,    KC_E,    KC_R,    KC_T,                          KC_Y,    KC_U,    KC_I,    KC_O,    KC_P    ,
-    TD(TD_A_TAB),    ALT_S,    GUI_D, SFT_F,    KC_G,                          KC_H,    SFT_J,   GUI_K,   ALT_L,   CTL_SCLN,
+    CTL_A,    ALT_S,    GUI_D, SFT_F,    KC_G,                          KC_H,    SFT_J,   GUI_K,   ALT_L,   CTL_SCLN,
     TD(TD_Z_PRN),    KC_X,    KC_C,    KC_V,    KC_B,    KC_GRV,            KC_BSLS, KC_N,    KC_M,    KC_COMM, KC_DOT,  RSFT_T(KC_SLSH),
     KC_ESC, KC_RALT, KC_LSFT,  LT(_NUM, KC_BSPC), MO(_FUN),  KC_LCPO,   KC_RCPC, LT(_SYMBOL,KC_SPC),  LT(_FUN,KC_ENT), KC_MINS, KC_QUOT, KC_ENT ),
 
