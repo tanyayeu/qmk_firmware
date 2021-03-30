@@ -33,7 +33,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_Q,    KC_W,    KC_F,    KC_P,    KC_B,                         KC_J,    KC_L,    KC_U,    KC_Y,    KC_QUOT    ,
     CTL_A, ALT_R, GUI_S, SHFT_T, KC_G,                                KC_M, SFT_N, GUI_E, ALT_I, CTL_O,
     KC_Z,    KC_X,    KC_C,    KC_D,    KC_V,    _______,     _______, KC_K,    KC_H,    KC_COMM, KC_DOT,  KC_SLSH ,
-    KC_ESC, _______, _______,  KC_ESC, LT(_NAV,KC_BSPC),  KC_TAB,  LT(_SYM,KC_ENT), LT(_NUM,KC_SPC),  LT(_FUN,KC_DEL), _______, _______, KC_ENT ),
+    KC_ESC, _______, _______,  LT(_NAV,KC_BSPC), LT(_NAV,KC_BSPC),  KC_TAB,          LT(_FUN,KC_DEL), LT(_NUM,KC_SPC),  LT(_SYM,KC_ENT), _______, _______, KC_ENT ),
 
 
   [_NAV] = LAYOUT( //NAVIGATION
