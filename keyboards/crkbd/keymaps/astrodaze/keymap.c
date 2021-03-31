@@ -57,7 +57,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
     LCTL_T(KC_LBRC),KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                    KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,  KC_RSPC,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                KC_LGUI, LT(_NUM,KC_BSPC),  LT(_CODE,KC_BSPC),  LT(_SYMBOL,KC_ENT), LT(_SYMBOL,KC_SPC), KC_RALT
+                                KC_LGUI, LT(_NUM,KC_BSPC),  LT(_CODE,KC_BSPC),  LT(_CODE,KC_ENT), LT(_SYMBOL,KC_SPC), KC_RALT
                                       //`--------------------------'  `--------------------------'
 
   ),
@@ -88,9 +88,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_CODE] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-        RESET, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_LBRC, KC_RBRC, XXXXXXX, KC_UNDS, KC_EQL, KC_BSLS,
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_LBRC, KC_RBRC, XXXXXXX, KC_UNDS, KC_EQL, KC_BSLS,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_CAPS, XXXXXXX, XXXXXXX, XXXXXXX, KC_QUES, XXXXXXX,                      XXXXXXX, KC_LT,   KC_GT, KC_MINS, KC_PLUS, KC_PIPE,
+      KC_CAPS, XXXXXXX, XXXXXXX, XXXXXXX, KC_QUES, XXXXXXX,                     KC_LEFT, KC_DOWN,   KC_UP,KC_RIGHT, KC_MINS, KC_PIPE,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LCBR, KC_RCBR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_RCBR,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
