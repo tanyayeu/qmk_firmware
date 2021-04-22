@@ -1,5 +1,3 @@
-
-
 // Configure the global tapping term (default: 200ms)
 #define TAPPING_TERM 200
 
@@ -11,4 +9,3 @@
 
 // Apply the modifier on keys that are tapped during a short hold of a modtap
 #define PERMISSIVE_HOLD
-
