@@ -1,0 +1,12 @@
+#pragma once
+
+
+#define PERMISSIVE_HOLD
+
+#define TAPPING_TERM_PER_KEY
+
+#define IGNORE_MOD_TAP_INTERRUPT
+
+#define TAPPING_TERM 150
+
+#define PERMISSIVE_HOLD
