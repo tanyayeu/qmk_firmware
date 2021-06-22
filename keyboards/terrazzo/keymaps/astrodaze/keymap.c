@@ -45,6 +45,7 @@ enum layers {
 #define RAISESP LT(_RAISE, KC_SPC)
 #define NAVENT LT(_NAV,KC_ENT)
 #define NAVTAB LT(_NAV, KC_TAB)
+#define RAISENT LT(_RAISE, KC_ENT)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -52,7 +53,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		KC_MUTE, KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,  _______,  _______,   KC_Y,    KC_U,    KC_I,     KC_O,    KC_P,
 	    TZ_NXT,  KC_A,    KC_S,    KC_D,    SFT_F,    KC_G, _______,  _______,   KC_H,    SFT_J,   GUI_K,   ALT_L,   CTL_SCLN,
 	    TZ_PRV,  CTL_Z,    KC_X,    KC_C,    KC_V,    KC_B,  _______,  _______,   KC_N,    KC_M,    KC_COMM,  KC_DOT,  KC_SLSH, 
-	    TZ_NXT,           KC_ESC,  KC_LGUI, LOWERSP,  LT(_NAV,KC_TAB),    RAISESP,   NAVENT, MO(_FN), KC_DEL
+	    TZ_NXT,           KC_ESC,  KC_LGUI, LOWERSP,  NAVTAB,    RAISESP,   RAISENT, MO(_FN), KC_DEL
   ),
 
   [_RAISE] = LAYOUT_ortho(
@@ -70,14 +71,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [_NAV] = LAYOUT_ortho(
-      _______, _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,   KC_UNDS, _______,
+      _______, _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,   KC_UNDS, KC_EQL,
 	    _______, KC_MPRV, KC_MNXT, KC_MPLY, KC_MUTE, XXXXXXX, XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_HOME,
 	    _______, _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  _______, KC_END, 
 	    TZ_OFF,          RESET, _______, _______,      _______,          _______,     _______, _______,  _______
   ),
 
   [_FN] = LAYOUT_ortho(
-		  _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  _______,
+		  _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,   KC_F11,  KC_F12,
 		  _______, _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_F11,  KC_F12,  _______, _______, 
 		  _______, _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, CG_TOGG, 
 		  _______,          RESET,   _______, _______,      _______,          _______,     _______, _______, _______
@@ -104,10 +105,10 @@ void encoder_update_user(uint8_t index, bool clockwise) {
         clockwise ? tap_code(KC_AUDIO_VOL_UP) : tap_code(KC_AUDIO_VOL_DOWN);
         break; 
       case 1:
-        clockwise ? tap_code(KC_PGDN) : tap_code(KC_PGUP);
+        clockwise ? tap_code(KC_PGUP) : tap_code(KC_PGDOWN);
         break;       
       case 2:
-        clockwise ? tap_code(KC_AUDIO_VOL_UP) : tap_code(KC_AUDIO_VOL_DOWN);
+        clockwise ? tap_code(KC_AUDIO_VOL_DOWN) : tap_code(KC_AUDIO_VOL_UP);
         break; 
     }
 }

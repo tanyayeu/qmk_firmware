@@ -113,3 +113,5 @@ so there is only one configuration. */
 
 // Apply the modifier on keys that are tapped during a short hold of a modtap
 #define PERMISSIVE_HOLD
+
+#define RGBLIGHT_SLEEP
