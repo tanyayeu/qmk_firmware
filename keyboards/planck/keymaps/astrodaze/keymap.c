@@ -48,6 +48,7 @@ enum planck_keycodes {
 #define NUM_BSPC LT(_NUM,KC_BSPC)
 #define SYM_SPC LT(_SYM,KC_SPC)
 #define TAB_OTHER LT(_OTHER,KC_TAB)
+#define OTHER MO(_OTHER)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -55,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_MUTE,             KC_MUTE,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,
     KC_A,    KC_S,    KC_D,    SFT_F,    KC_G,    _______,            _______,    KC_H,    SFT_J,   GUI_K,   ALT_L,   CTL_SCLN,
     KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    _______,             _______,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,
-    KC_ESC, KC_LCTL, KC_LALT, KC_LGUI, NUM_BSPC,   TAB_OTHER,             KC_ENT,  SYM_SPC,   KC_ENT, KC_DOWN, KC_UP,   KC_DEL
+    KC_ESC, KC_LCTL, KC_LGUI, OTHER, NUM_BSPC,   TAB_OTHER,             KC_ENT,  SYM_SPC,   KC_ENT, KC_DOWN, KC_UP,   KC_DEL
 ),
 
 
@@ -98,18 +99,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 
 [_OTHER] = LAYOUT_planck_grid(
-    KC_F1,   KC_F2,   KC_F3,    KC_F4,   KC_F5, _______, _______,  KC_F6,    KC_F7,  KC_F8,    KC_9,    KC_F10,
-    KC_F11, KC_F12, _______, _______, _______, _______, _______, _______, _______,  _______, _______, KC_HOME,
+    KC_F1,   KC_F2,   KC_F3,    KC_F4,   KC_F5, _______, _______,  _______, _______, _______, KC_UNDS,  KC_EQL,
+    KC_F11, KC_F12, _______, _______, _______, _______, _______, _______, _______,  _______, KC_MINS, KC_HOME,
     _______, _______, _______, _______, _______, _______, _______, _______, _______,  _______, _______, KC_END,
     _______, _______, _______, _______, _______, _______, _______, _______, _______,  _______, _______, _______
 )
 
 };
 
-
-#ifdef ENCODER_ENABLE
+/*ifdef ENCODER_ENABLE
 void encoder_update_user(uint8_t index, bool clockwise) {
-    if (index == 0) { /* First encoder */
+    if (index == 0) { 
         if (clockwise) {
             tap_code(KC_VOLU);
         } else {
@@ -118,3 +118,19 @@ void encoder_update_user(uint8_t index, bool clockwise) {
     }
 }
 #endif
+*/
+
+
+void encoder_update_user(uint8_t index, bool clockwise) {
+    switch(index) {
+      case 0:
+        clockwise ? tap_code(KC_AUDIO_VOL_UP) : tap_code(KC_AUDIO_VOL_DOWN);
+        break; 
+      case 1:
+        clockwise ? tap_code(KC_PGUP) : tap_code(KC_PGDOWN);
+        break;       
+      case 2:
+        clockwise ? tap_code(KC_AUDIO_VOL_DOWN) : tap_code(KC_AUDIO_VOL_UP);
+        break; 
+    }
+}
