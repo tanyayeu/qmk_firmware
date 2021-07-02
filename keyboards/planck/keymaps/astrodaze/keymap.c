@@ -54,7 +54,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_QWERTY] = LAYOUT_planck_grid(
     KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_MUTE,             KC_MUTE,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,
-    KC_A,    KC_S,    KC_D,    SFT_F,    KC_G,    _______,            _______,    KC_H,    SFT_J,   GUI_K,   ALT_L,   CTL_SCLN,
+    KC_A,    KC_S,    KC_D,    SFT_F,    KC_G,    KC_VOLD,            KC_VOLU,    KC_H,    SFT_J,   GUI_K,   ALT_L,   CTL_SCLN,
     KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    _______,             _______,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,
     KC_ESC, KC_LCTL, KC_LGUI, OTHER, NUM_BSPC,   TAB_OTHER,             KC_ENT,  SYM_SPC,   KC_ENT, KC_DOWN, KC_UP,   KC_DEL
 ),
@@ -124,7 +124,7 @@ void encoder_update_user(uint8_t index, bool clockwise) {
 void encoder_update_user(uint8_t index, bool clockwise) {
     switch(index) {
       case 0:
-        clockwise ? tap_code(KC_AUDIO_VOL_UP) : tap_code(KC_AUDIO_VOL_DOWN);
+        clockwise ? tap_code(KC_AUDIO_VOL_DOWN) : tap_code(KC_AUDIO_VOL_UP);
         break; 
       case 1:
         clockwise ? tap_code(KC_PGUP) : tap_code(KC_PGDOWN);
