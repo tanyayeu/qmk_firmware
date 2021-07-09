@@ -50,22 +50,22 @@ enum layers {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_QWERTY] = LAYOUT_ortho(
-		KC_MUTE, KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,  _______,  _______,   KC_Y,    KC_U,    KC_I,     KC_O,    KC_P,
-	    TZ_NXT,  KC_A,    KC_S,    KC_D,    SFT_F,    KC_G, _______,  _______,   KC_H,    SFT_J,   GUI_K,   ALT_L,   CTL_SCLN,
+		KC_MUTE, KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,  KC_MUTE,  KC_MPLY,   KC_Y,    KC_U,    KC_I,     KC_O,    KC_P,
+	    TZ_NXT,  KC_A,    KC_S,    KC_D,    SFT_F,    KC_G, KC_MPRV,  KC_MNXT,   KC_H,    SFT_J,   GUI_K,   ALT_L,   CTL_SCLN,
 	    TZ_PRV,  CTL_Z,    KC_X,    KC_C,    KC_V,    KC_B,  _______,  _______,   KC_N,    KC_M,    KC_COMM,  KC_DOT,  KC_SLSH, 
 	    TZ_NXT,           KC_ESC,  KC_LGUI, LOWERSP,  NAVTAB,    RAISESP,   RAISENT, MO(_FN), KC_DEL
   ),
 
   [_RAISE] = LAYOUT_ortho(
       _______, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, _______, _______, KC_CIRC, KC_AMPR, KC_ASTR, KC_UNDS, KC_EQL,
-	    _______, KC_LPRN, KC_RPRN, KC_LCBR, KC_RCBR, XXXXXXX, XXXXXXX, XXXXXXX, KC_MINS, KC_EQL,  _______, KC_BSLS, KC_PIPE,
+	    _______, KC_LPRN, KC_RPRN, KC_LCBR, KC_RCBR, XXXXXXX, XXXXXXX, XXXXXXX, _______,KC_UNDS,  KC_PLUS, KC_BSLS, KC_PIPE,
 	    _______, KC_LBRC, KC_RBRC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, _______, _______, _______, _______, 
 	    _______,          _______, _______, _______,      _______,     _______,     _______, _______, _______
   ),
 
   [_LOWER] = LAYOUT_ortho(
       _______,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    _______,    _______,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,
-	    _______, KC_CAPS, XXXXXXX, KC_TILD, KC_QUES, KC_GRV, XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_UP, KC_MINS,  KC_QUOT,
+	    _______, KC_CAPS, XXXXXXX, KC_TILD, KC_QUES, KC_GRV, XXXXXXX, XXXXXXX, _______, KC_MINS, KC_EQL, _______,  KC_QUOT,
 	    _______, _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, _______, _______, _______, _______, 
 	    _______,          _______, _______, _______,      _______,          _______,     KC_VOLD, KC_VOLU, KC_MPLY
   ),
